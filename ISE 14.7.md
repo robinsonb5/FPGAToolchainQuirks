@@ -30,3 +30,12 @@ ISE should be run with the userspace USB library preloaded like so:
 ```
 > LD_PRELOAD=/path/to/libusb-driver.so ise
 ```
+## Running ChipScope
+If attempting to run ChipScope fails, with the following text in the shell window:
+```
+/path/to/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/analyzer: 72: /path/to/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/cs_common.sh: XIL_DIRS[0]=/opt/Xilinx/14.7/ISE_DS/ISE/: not found
+```
+edit the file /path/to/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/analyzer and change the first line to:
+```
+#!/bin/bash
+```
